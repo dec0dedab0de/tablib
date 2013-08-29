@@ -695,5 +695,12 @@ Old       |Man       |100500
         except tablib.InvalidDatasetType:
             self.fail("Subclass of tablib.Dataset should be accepted by Databook.add_sheet")
 
+    def test_mediawiki_export(self):
+        """MediaWiki export"""
+        
+        expectedoutput = '{| class="wikitable"\r\n!first_name!!last_name!!gpa!\r\n|-\r\n|John||Adams||90\r\n|-\r\n|George||Washington||67\r\n|-\r\n|Thomas||Jefferson||50\r\n|}'
+        
+        self.assertEqual(expectedoutput, self.founders.mediawiki)
+
 if __name__ == '__main__':
     unittest.main()
