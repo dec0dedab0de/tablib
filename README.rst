@@ -21,6 +21,7 @@ Output formats supported:
 - HTML (Sets)
 - TSV (Sets)
 - CSV (Sets)
+- MediaWiki (Sets)
 
 Note that tablib *purposefully* excludes XML support. It always will. (Note: This is a joke. Pull requests are welcome.)
 
@@ -119,6 +120,20 @@ EXCEL!
 
 	>>> with open('people.xls', 'wb') as f:
 	...     f.write(data.xls)
+
+
+MediaWiki!
+++++++
+::
+
+	>>> print data.mediawiki
+	{| class="wikitable"
+	!first_name!!last_name!!age!
+	|-
+	|John||Adams||90
+	|-
+	|Henry||Ford||83
+	|}
 
 It's that easy.
 

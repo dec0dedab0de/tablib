@@ -17,10 +17,10 @@ def export_set(dataset):
     #stream = StringIO()
     rows = []
     if dataset.headers:
-        headerline = "!" + "!!".join(header for header in dataset.headers) + "!"
+        headerline = "!" + "!!".join(str(header) for header in dataset.headers) + "!"
         rows.append(headerline)
     for row in dataset:
-        rowline = "|" + "||".join(cell for cell in row)
+        rowline = "|" + "||".join(str(cell) for cell in row)
         rows.append(rowline)
     
     return '{| class="wikitable"\r\n' + '\r\n|-\r\n'.join(rows) + '\r\n|}'
