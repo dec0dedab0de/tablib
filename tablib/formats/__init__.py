@@ -12,5 +12,6 @@ from . import _html as html
 from . import _xlsx as xlsx
 from . import _ods as ods
 from . import _mediawiki as mediawiki
+from . import _bbcode as bbcode
 
-available = (json, xls, yaml, csv, tsv, html, xlsx, ods, mediawiki)
+available = (json, xls, yaml, csv, tsv, html, xlsx, ods, mediawiki, bbcode)
