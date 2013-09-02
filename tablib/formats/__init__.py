@@ -13,5 +13,6 @@ from . import _xlsx as xlsx
 from . import _ods as ods
 from . import _mediawiki as mediawiki
 from . import _bbcode as bbcode
+from . import _rst as rst
 
-available = (json, xls, yaml, csv, tsv, html, xlsx, ods, mediawiki, bbcode)
+available = (json, xls, yaml, csv, tsv, html, xlsx, ods, mediawiki, bbcode,rst)

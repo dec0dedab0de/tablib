@@ -23,7 +23,7 @@ def export_set(dataset):
         rowline = "\t[tr]" + r"[\td][td]".join(str(cell) for cell in row) + r"[\td]"
         rows.append(rowline)
     
-    return '[table]\r\n' + '\r\n[tr]\r\n'.join(rows) + '\r\n' + r'[\tr]'
+    return '[table]\r\n' + '\r\n[tr]\r\n'.join(rows) + '\r\n' + r'[\tr][\table]'
 #
 #def import_set(dset, in_stream, headers=True):
 #    """Returns dataset from TSV stream."""
